@@ -1,0 +1,85 @@
+body, html {
+  background-color: #3c3f41;
+  color: #fcfcfc;
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  color: #fcfcfc;
+}
+
+button {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 2px solid #fcfcfc;
+  border-radius: 15px;
+  background-color: #3c3f41;
+  color: #fcfcfc;
+}
+
+button:active, button:hover {
+  background-color: #fcfcfc;
+  color: #3c3f41;
+  border-color: #3c3f41;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:disabled {
+  color: #6f7578;
+  cursor: not-allowed;
+}
+
+h2 {
+  color: #fcfcfc;
+}
+
+.status.victory {
+  animation-name: victory;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes victory {
+  0% {color: orange;}
+  50% {color: lightblue;}
+  100% {color: violet;}
+}
+
+.tictactoe-board {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.tictactoe-cell {
+  width: 100px;
+  height: 100px;
+  min-height: 100px;
+}
+
+@media (min-width: 576px) {
+  .tictactoe-board {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .tictactoe-cell {
+    width: calc(100% / 3);
+    height: calc(100% / 3);
+  }
+}
